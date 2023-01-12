@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Semi+Condensed&family=Fraunces:opsz@9..144&family=Inter&family=Montserrat&family=Open+Sans&family=Outfit&family=Public+Sans&family=Raleway&family=Red+Hat+Display&family=Rubik+Bubbles&display=swap');
+:root {
+    --paleBlue: hsl(225, 100%, 94%);
+    --brightBlue: hsl(245, 75%, 52%);
+    --verypaleBlue: hsl(225, 100%, 98%);
+    --desaturatedBlue: hsl(224, 23%, 55%);
+    --darkBlue: hsl(223, 47%, 23%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Red Hot Display', sans-serif;
+}
+
+body {
+    font-weight: 500;
+    background-color: var(--paleBlue);
+}
+
+
+
+strong,
+bold,
+h2,
+h3 {
+    font-weight: 700;
+}
+
+ul, a {
+    list-style-type: none;
+    text-decoration: none;
+}
+
+
+.container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(./images/pattern-background-desktop.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.summary__card { 
+    max-width: 475px;
+    background-color: #fff;
+    border-radius: 20px;
+    box-shadow: 0 5px 25px var(--desaturatedBlue);
+}
+
+.summary__image,
+.summary__image img {
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+}
+
+.summary__card-header,
+.summary__card-body {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.summary__card-header {
+    margin-top: 1rem;
+}
+
+.summary__card-header h2 {
+    text-align: center;
+    padding: 1.5rem 0;
+    font-size: 30px;
+}
+
+.summary__card-header p {
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    color: var(--desaturatedBlue);
+    line-height: 1.6;
+    font-size: 17px;
+}
+
+
+.plan {
+    width: 85%;
+    margin: 1rem auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--verypaleBlue);
+    border-radius: 10px;
+    padding: 1rem 1.5rem;
+}
+
+.left-side {
+    display: flex;
+}
+
+.left-side img {
+    margin-right: 1rem;
+}
+
+.price {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.7;
+}
+
+.price span {
+    color: var(--desaturatedBlue);
+}
+
+.right-side a {
+    color: var(--brightBlue);
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.summary__card-body {
+    width: 85%;
+    margin: 2rem auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.proceed__payment-btn,
+.cancel__order-btn {
+    width: 85%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.proceed__payment-btn {
+    margin-bottom: 1rem;
+    background-color: var(--brightBlue);
+    color: #fff;
+    padding: 1rem 0;
+    border-radius: 10px;
+    box-shadow: 0 5px 25px var(--paleBlue);
+}
+
+.proceed__payment-btn:hover {
+    background-color: hsl(245, 74%, 62%);
+}
+
+.cancel__order-btn {
+    color: var(--desaturatedBlue);
+    font-weight: 700;
+    border-radius: 10px;
+    padding: 1rem 0;
+}
+
+.cancel__order-btn:hover {
+    background-color: rgb(230, 228, 228);
+}
+
+@media (max-width: 630px) {
+    .summary__card {
+        max-width: 370px;
+    }
+
+    .summary__card-header h2 {
+        font-size: 26px;
+    }
+
+    .summary__card p {
+        font-size: 16px;
+        width: 90%;
+    }
+
+    .plan {
+        width: 90%;
+    }
+
+    .left-side img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .price {
+        font-size: 15px;
+    }
+
+    .right-side a {
+        font-size: 15px;
+    }
+}
